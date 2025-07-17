@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Public Central</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <style>
+    /* Place all your CSS here */
+    /* ... your existing styles ... */
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <section class="header">
+    <nav>
+      <a href="index.html"><img src="image/lgo.jpg" class="logo" alt="School Logo" /></a>
+      <i class="fas fa-bars" id="menu-icon" onclick="showMenu()"></i>
+      <div class="nav-links" id="navLinks">
+        <i class="fas fa-times" id="close-icon" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html" class="btn-home">Home</a></li>
+          <li><a href="About-us.html" class="btn-about">About</a></li>
+          <li><a href="course.html" class="btn-course">Course</a></li>
+          <li><a href="contact.html" class="btn-contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Contact Info Section -->
+  <section class="contact-info" id="contact-info">
+    <h1>Contact Information</h1>
+    <p>Reach out to us using the details below.</p>
+    <div class="contact-details">
+      <p><strong>📍 Address:</strong> Letang-6, TalimKendra, Morang</p>
+      <p><strong>📞 Phone:</strong> 9842572030</p>
+      <p><strong>✉️ Email:</strong> publicboarding123@gmail.com</p>
+      <p><strong>🕒 Office Hours:</strong> Sun–Fri: 9:00 AM to 4:00 PM</p>
+    </div>
+    <div class="contact-actions">
+      <a href="tel:+9779842572030" class="call-btn"><i class="fas fa-phone-alt"></i> Call Now</a>
+      <a href="https://wa.me/9842572030" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <h1>For the Enrollment.</h1>
+    <a href="#" class="hero-btn">Contact Us</a>
+  </section>
+
+  <!-- Footer -->
+  <section class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <h4>About Us</h4>
+        <p>Public Central School is dedicated to academic excellence and student growth.</p>
+        <div class="icons">
+          <a href="https://www.facebook.com/p/Public-central-secondary-english-school-letang-bhogtani-100063474327132/"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <h4>Our Location</h4>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.6163764386594!2d87.5017595!3d26.7532553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef6060c525d149%3A0xc718c72b0ad23d72!2sPublic%20Central%20Secondary%20English%20Boarding%20School!5e0!3m2!1sen!2snp!4v1718790669283!5m2!1sen!2snp" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Public Central School | Designed with ❤️ by Lashang</p>
+    </div>
+  </section>
+
+  <!-- JS for menu toggle -->
+  <script>
+    const navLinks = document.getElementById("navLinks");
+    const menuIcon = document.getElementById("menu-icon");
+    const closeIcon = document.getElementById("close-icon");
+
+    function showMenu() {
+      navLinks.style.right = "0";
+      menuIcon.style.display = "none";
+      closeIcon.style.display = "block";
+    }
+
+    function hideMenu() {
+      navLinks.style.right = "-220px";
+      menuIcon.style.display = "block";
+      closeIcon.style.display = "none";
+    }
+  </script>
+
+  <style>
+    /* ======= General Styles ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ======= Logo ======= */
+.logo {
+  width: 180px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* ======= Navigation ======= */
+nav {
+  display: flex;
+  padding: 10px 6%;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(146, 146, 201);
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+  position: relative;
+  transition: right 0.5s ease;
+}
+
+.nav-links ul {
+  list-style: none;
+}
+
+.nav-links ul li {
+  display: inline-block;
+  padding: 8px 18px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links ul li:hover a {
+  color: #f44336;
+}
+
+.nav-links ul li::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.4s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+/* Navigation Buttons */
+.btn-home,
+.btn-about,
+.btn-course,
+.btn-contact {
+  border: 2px solid #007bff;
+  border-radius: 6px;
+  padding: 8px 16px;
+  color: #007bff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+.btn-home:hover,
+.btn-about:hover,
+.btn-course:hover,
+.btn-contact:hover {
+  color: black;
+}
+
+/* Hamburger and Close Icon */
+nav .fas {
+  display: none;
+  cursor: pointer;
+  font-size: 28px;
+  color: white;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 2001;
+}
+
+/* Menu toggle icons */
+#menu-icon,
+#close-icon {
+  font-size: 28px;
+  color: #fff;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  z-index: 2001;
+  display: none;
+}
+
+/* ======= Advanced Contact Info Section ======= */
+.contact-info {
+  background: rgba(255,255,255,0.18);
+  box-shadow: 0 8px 32px 0 rgba(99,102,241,0.18), 0 1.5px 8px #f4433622;
+  backdrop-filter: blur(12px);
+  border-radius: 22px;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 90px;
+  animation: fadeInStagger 1.2s cubic-bezier(.77,0,.18,1) forwards;
+}
+.contact-info h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #222;
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 16px #6366f1cc, 0 1px 4px #f44336cc;
+  opacity: 0;
+  animation: fadeInStagger 1.2s 0.2s cubic-bezier(.77,0,.18,1) forwards;
+}
+.contact-info p {
+  font-size: 1.15rem;
+  color: #444;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeInStagger 1.2s 0.4s cubic-bezier(.77,0,.18,1) forwards;
+}
+.contact-details {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  animation: fadeInStagger 1.2s 0.6s cubic-bezier(.77,0,.18,1) forwards;
+}
+.contact-details p {
+  margin: 10px 0;
+  font-weight: 500;
+  background: rgba(236,239,255,0.7);
+  border-radius: 10px;
+  padding: 10px 18px;
+  box-shadow: 0 2px 8px #6366f122;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.contact-details p:hover {
+  transform: scale(1.04) translateX(8px);
+  box-shadow: 0 4px 16px #6366f1cc;
+}
+.contact-details strong {
+  color: #6366f1;
+  font-weight: 700;
+}
+/* --- Animated Action Buttons --- */
+.contact-actions {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeInStagger 1.2s 0.8s cubic-bezier(.77,0,.18,1) forwards;
+}
+.call-btn, .whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 36px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 12px;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(90deg, #6366f1 0%, #f44336 100%);
+  box-shadow: 0 4px 24px #6366f1cc, 0 1.5px 8px #f4433622;
+  transition: background 0.4s, box-shadow 0.4s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 1px;
+  animation: float 6s ease-in-out infinite;
+}
+.call-btn:hover, .whatsapp-btn:hover {
+  background: linear-gradient(90deg, #f44336 0%, #6366f1 100%);
+  box-shadow: 0 0 32px 8px #f44336cc, 0 0 16px #6366f1cc;
+  transform: scale(1.08) translateY(-2px) rotateZ(-1deg);
+  animation: glow 1.2s infinite alternate;
+}
+.call-btn i, .whatsapp-btn i {
+  margin-right: 10px;
+  font-size: 1.2em;
+  transition: color 0.3s, transform 0.3s;
+}
+.call-btn:hover i, .whatsapp-btn:hover i {
+  color: #fff200;
+  transform: scale(1.18) rotateZ(-8deg);
+  animation: iconPulse 0.8s;
+}
+/* --- Keyframes for advanced effects --- */
+@keyframes fadeInStagger {
+  0% { opacity: 0; transform: translateY(40px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 16px 4px #6366f1cc, 0 0 0 #f44336; }
+  50% { box-shadow: 0 0 32px 8px #f44336cc, 0 0 24px 8px #6366f1cc; }
+}
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.18) rotateZ(-8deg); }
+}
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .contact-info {
+    padding: 40px 8px;
+    border-radius: 12px;
+  }
+  .contact-info h1 {
+    font-size: 1.5rem;
+  }
+  .contact-details p {
+    font-size: 1rem;
+    padding: 8px 8px;
+  }
+  .call-btn, .whatsapp-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 10px;
+    font-size: 1rem;
+  }
+}
+
+/* ======= CTA Section ======= */
+.cta {
+  margin: 20px auto;
+  width: 80%;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url('image/public-6.JPG');
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  text-align: center;
+  padding: 50px 20px;
+  height: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cta h1 {
+  color: #fff;
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 14px 40px;
+  font-size: 14px;
+  border-radius: 30px;
+  background: transparent;
+  transition: all 0.4s ease-in-out;
+}
+
+.hero-btn:hover {
+  background: #f44336;
+  border-color: #f44336;
+  color: #fff;
+  box-shadow: 0 0 10px #f44336;
+}
+
+/* ======= Footer ======= */
+.footer {
+  background: #1e293b;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1 1 300px;
+}
+
+.footer-left h4,
+.footer-right h4 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #38bdf8;
+}
+
+.footer-left p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.icons a {
+  color: #fff;
+  font-size: 18px;
+  margin-right: 10px;
+  background: #0f172a;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.icons a:hover {
+  background: #38bdf8;
+  color: #000;
+}
+
+.footer-right iframe {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  height: 200px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #334155;
+  font-size: 14px;
+  color: #cbd5e1;
+}
+
+/* ======= Animations ======= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======= Responsive Design ======= */
+@media (max-width: 768px) {
+  /* Navigation */
+  .nav-links {
+    position: absolute;
+    background: #1e293b;
+    height: 100vh;
+    width: 220px;
+    top: 0;
+    right: -220px;
+    text-align: left;
+    transition: right 0.5s ease;
+    padding-top: 60px;
+    z-index: 1500;
+  }
+
+  .nav-links ul {
+    display: block;
+    margin-top: 30px;
+  }
+
+  .nav-links ul li {
+    display: block;
+    padding: 15px 20px;
+  }
+
+  .nav-links ul li a {
+    color: #fff;
+    font-size: 18px;
+    display: block;
+  }
+
+  /* Show hamburger by default */
+  #menu-icon {
+    display: block;
+  }
+
+  /* Hide close icon by default */
+  #close-icon {
+    display: none;
+  }
+  .icons {
+  margin-top: 20px;
+}
+
+  /* Show close icon when menu open (controlled by JS) */
+  .nav-links.show {
+    right: 0;
+  }
+
+  /* Contact Info */
+  .contact-info h1 {
+    font-size: 28px;
+  }
+
+  .contact-info p,
+  .contact-details {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .call-btn,
+  .whatsapp-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* CTA Section */
+  .cta {
+    width: 95%;
+    padding: 40px 15px;
+  }
+
+  .cta h1 {
+    font-size: 28px;
+  }
+
+  .hero-btn {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-right iframe {
+    height: 250px;
+  }
+}
+
+.hero-btn, .submit-btn {
+  background: linear-gradient(90deg, #6366f1 0%, #f44336 100%);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  box-shadow: 0 4px 24px #6366f1cc, 0 1.5px 8px #f4433622;
+  transition: background 0.4s, box-shadow 0.4s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInStagger 1.2s 0.6s cubic-bezier(.77,0,.18,1) forwards;
+}
+.hero-btn::after, .submit-btn::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, #f44336, #6366f1);
+  transition: width 0.4s cubic-bezier(.77,0,.18,1);
+}
+.hero-btn:hover, .submit-btn:hover {
+  background: linear-gradient(90deg, #f44336 0%, #6366f1 100%);
+  box-shadow: 0 0 32px 8px #f44336cc, 0 0 16px #6366f1cc;
+  transform: scale(1.08) translateY(-2px) rotateZ(-1deg);
+  animation: glow 1.2s infinite alternate;
+}
+.hero-btn:hover::after, .submit-btn:hover::after {
+  width: 100%;
+  animation: borderGrow 0.6s forwards;
+}
+
+  </style>
+</body>
+</html>

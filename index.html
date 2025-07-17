@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Public Central</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <section class="header">
+    <nav>
+      <a href="index.html"><img src="image/lgo.jpg" class="logo" alt="School Logo" /></a>
+    
+      <!-- Menu Open Icon -->
+      <i class="fas fa-bars" id="menu-icon" onclick="showMenu()"></i>
+    
+      <div class="nav-links" id="navLinks">
+        <!-- Menu Close Icon -->
+        <i class="fas fa-times" id="close-icon" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="index.html" class="btn-home">Home</a></li>
+          <li><a href="About-us.html" class="btn-about">About Us</a></li>
+          <li><a href="course.html" class="btn-course">Course</a></li>
+          <li><a href="contact.html" class="btn-contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    
+    
+
+    <div class="text-box">
+      <h1>Letang's Best School</h1>
+        <p>Empowering students through innovation, community, and a love for learning.</p>
+    
+      <a href="contact.html" class="hero-btn">VISIT US FOR MORE INQUIRIES</a>
+    </div>
+  </section>
+  
+
+  <!-- Courses -->
+  <section class="course section-highlight">
+    <h1 class="text-highlight">Courses We Offer</h1>
+    <p class="text-highlight">From ECD to Grade 10 following the national curriculum of Nepal.</p>
+    <div class="row">
+      <div class="course-col card-highlight">
+        <h3>Early Childhood Development (ECD)</h3>
+        <p>Foundation through play-based learning and child-centered development.</p>
+      </div>
+      <div class="course-col card-highlight">
+        <h3>Primary Level (Grades 1–5)</h3>
+        <p>Strong basics in languages, math, science and moral values.</p>
+      </div>
+      <div class="course-col card-highlight">
+        <h3>Secondary Level (Grades 6–10)</h3>
+        <p>Preparation for board exams and critical thinking skills in core subjects.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Campus -->
+  <section class="campus section-highlight">
+    <h1 class="text-highlight">BEGIN YOUR JOURNEY HERE</h1>
+    <p class="text-highlight">A nurturing atmosphere for Letang's future leaders.</p>
+    <div class="row">
+      <div class="campus-col card-highlight">
+        <img src="image/IMG_6905.JPG" alt="School Building" class="image-highlight" />
+        <div class="layer"><h3>Main Building</h3></div>
+      </div>
+      <div class="campus-col card-highlight">
+        <img src="image/program.jpeg" alt="School Events" class="image-highlight" />
+        <div class="layer"><h3>Programs</h3></div>
+      </div>
+      <div class="campus-col card-highlight">
+        <img src="image/learninaction.jpeg" alt="Learning" class="image-highlight" />
+        <div class="layer"><h3>Learning in Action</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities -->
+  <section class="facilities section-highlight">
+    <h1 class="text-highlight">Our Facilities</h1>
+    <p class="text-highlight">We support holistic development with modern infrastructure.</p>
+    <div class="row">
+      <div class="facilities-col card-highlight">
+        <img src="image/public-3.jpg" alt="Teachers" class="image-highlight" />
+        <h3>Experienced Teachers</h3>
+        <p>Professional and caring staff for quality education.</p>
+      </div>
+      <div class="facilities-col card-highlight">
+        <img src="image/The Best Libraries in London-jpg-2.jpeg" alt="Library" class="image-highlight" />
+        <h3>Library</h3>
+        <p>Well-stocked for reading, reference, and research.</p>
+      </div>
+      <div class="facilities-col card-highlight">
+        <img src="image/images.jpeg" alt="Computer Lab" class="image-highlight" />
+        <h3>Computer Lab</h3>
+        <p>Modern systems to teach digital literacy.</p>
+      </div>
+      <div class="facilities-col card-highlight">
+        <img src="image/class.jpeg" alt="Classrooms" class="image-highlight" />
+        <h3>Classrooms</h3>
+        <p>Clean, ventilated, and interactive learning spaces.</p>
+      </div>
+      <div class="facilities-col card-highlight">
+        <img src="image/sport.jpeg" alt="Sports" class="image-highlight" />
+        <h3>Sports</h3>
+        <p>Weekly activities to build fitness and teamwork.</p>
+      </div>
+      <div class="facilities-col card-highlight">
+        <img src="image/public-5.JPG" alt="Playground" class="image-highlight" />
+        <h3>Playground</h3>
+        <p>Spacious grounds for sports and recreation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enquiry Form -->
+  <section class="enquiry-form section-highlight">
+    <div class="form-container scroll-highlight">
+      <h1 class="text-highlight">Admission Enquiry</h1>
+      <p class="text-highlight">Interested in joining Public Central School? Fill out the form below and we'll get in touch with you.</p>
+      <form id="enquiryForm" onsubmit="handleFormSubmission(event)">
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Full Name" required />
+          <input type="email" name="email" placeholder="Email Address" required />
+        </div>
+        <div class="form-group">
+          <input type="tel" name="phone" placeholder="Phone Number" required />
+          <input type="text" name="subject" placeholder="Subject of Enquiry" />
+        </div>
+        <textarea name="message" rows="5" placeholder="Your Message or Inquiry..." required></textarea>
+        <button type="submit" class="submit-btn">Send Enquiry</button>
+      </form>
+      <div id="thankYouMessage" class="thank-you-message" style="display: none;">
+        <h3>Thank you for your enquiry!</h3>
+        <p>We have received your message and will get back to you soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="principal-msg section-highlight">
+    <img src="image/principle.jpg" alt="Principal Dawa Tamang" class="principal-img image-highlight" />
+    <div class="principal-text">
+      <h1 class="text-highlight">Message from the Principal</h1>
+      <p class="text-highlight">
+        "At Public Central School, we believe every child deserves the best education. 
+        We are committed to academic excellence and moral integrity." <br>– Rajesh Kumar Chemjong
+      </p>
+    </div>
+  </section>
+  
+  
+  <!-- Call to Action -->
+  <section class="cta section-highlight">
+    <h1 class="text-highlight">For the Enrollment.</h1>
+    <a href="contact.html" class="hero-btn">Contact Us</a>
+  </section>
+
+
+  
+  <!-- Footer -->
+  <section class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <h4>Find Us On</h4>
+        <p>Public Central School is dedicated to academic excellence and student growth in the community of Letang.</p>
+        <div class="icons">
+          <a href="https://www.facebook.com/p/Public-central-secondary-english-school-letang-bhogtani-100063474327132/"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <h4>Our Location</h4>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.6163764386594!2d87.5017595!3d26.7532553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef6060c525d149%3A0xc718c72b0ad23d72!2sPublic%20Central%20Secondary%20English%20Boarding%20School!5e0!3m2!1sen!2snp!4v1718790669283!5m2!1sen!2snp"
+          width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Public Central School | Designed with ❤️ by Lashang</p>
+    </div>
+  </section>
+
+  <!-- JS for menu toggle -->
+
+  <script>
+    const navLinks = document.getElementById("navLinks");
+    const menuIcon = document.getElementById("menu-icon");
+    const closeIcon = document.getElementById("close-icon");
+    const nav = document.querySelector("nav");
+  
+    function showMenu() {
+      navLinks.style.right = "0";
+      menuIcon.style.display = "none";
+      closeIcon.style.display = "block";
+    }
+  
+    function hideMenu() {
+      navLinks.style.right = "-220px";
+      menuIcon.style.display = "block";
+      closeIcon.style.display = "none";
+    }
+
+    // Add shadow to nav on scroll
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // Center highlighting function
+    function checkCenterHighlight() {
+      const highlightElements = document.querySelectorAll('.section-highlight, .card-highlight, .text-highlight, .image-highlight, .scroll-highlight');
+      
+      highlightElements.forEach(element => {
+        const rect = element.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        // Check if element is in the center 60% of the viewport
+        const isInCenter = rect.top < windowHeight * 0.8 && rect.bottom > windowHeight * 0.2;
+        
+        if (isInCenter) {
+          element.classList.add('in-center');
+        } else {
+          element.classList.remove('in-center');
+        }
+      });
+    }
+
+    // Throttle function for better performance on mobile
+    function throttle(func, limit) {
+      let inThrottle;
+      return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+          func.apply(context, args);
+          inThrottle = true;
+          setTimeout(() => inThrottle = false, limit);
+        }
+      }
+    }
+
+    // Mobile touch handling
+    function handleMobileTouch() {
+      const touchElements = document.querySelectorAll('.card-highlight, .course-col, .facilities-col, .campus-col');
+      
+      touchElements.forEach(element => {
+        element.addEventListener('touchstart', function() {
+          this.classList.add('active-touch');
+        });
+        
+        element.addEventListener('touchend', function() {
+          setTimeout(() => {
+            this.classList.remove('active-touch');
+          }, 150);
+        });
+      });
+    }
+
+    // Initialize highlighting and touch handling
+    window.addEventListener('scroll', throttle(checkCenterHighlight, 100));
+    window.addEventListener('resize', throttle(checkCenterHighlight, 100));
+    document.addEventListener('DOMContentLoaded', () => {
+      checkCenterHighlight();
+      handleMobileTouch();
+    });
+
+    // Enquiry form submission
+    async function handleFormSubmission(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+      const submitBtn = form.querySelector('.submit-btn');
+      const thankYouMessage = document.getElementById('thankYouMessage');
+      
+      // Disable button
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      // Primary submission via Web3Forms
+      const web3FormsData = {
+        apikey: "df97b749-f903-4819-a1da-45842813589b",
+        name: formData.get("name"),
+        email: formData.get("email"),
+        phone: formData.get("phone"),
+        subject: formData.get("subject"),
+        message: formData.get("message"),
+      };
+
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(web3FormsData),
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          form.style.display = 'none';
+          thankYouMessage.style.display = 'block';
+        } else {
+          // Fallback to FormSubmit.co
+          await fallbackFormSubmit(form);
+        }
+      } catch (error) {
+        // Fallback to FormSubmit.co on network error
+        await fallbackFormSubmit(form);
+      }
+    }
+
+    async function fallbackFormSubmit(form) {
+      const thankYouMessage = document.getElementById('thankYouMessage');
+      try {
+        const response = await fetch("https://formsubmit.co/ajax/lashangtamangyt@gmail.com", {
+          method: "POST",
+          body: new FormData(form),
+        });
+
+        if (response.ok) {
+          form.style.display = 'none';
+          thankYouMessage.style.display = 'block';
+        } else {
+          alert("Submission failed. Please try again.");
+          form.querySelector('.submit-btn').disabled = false;
+          form.querySelector('.submit-btn').textContent = 'Send Enquiry';
+        }
+      } catch (error) {
+        alert("An unexpected error occurred. Please check your connection and try again.");
+        form.querySelector('.submit-btn').disabled = false;
+        form.querySelector('.submit-btn').textContent = 'Send Enquiry';
+      }
+    }
+  </script>
+</body>
+</html>
